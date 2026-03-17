@@ -1,0 +1,204 @@
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    /* 基础色彩 - 马卡龙粉蓝主题 */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 20%;
+    
+    /* 主色调 - 温暖的粉色 */
+    --primary: 340 82% 75%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 340 70% 85%;
+    
+    /* 次要色 - 柔和的蓝色 */
+    --secondary: 210 80% 75%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 210 70% 85%;
+    
+    /* 柔和色调 */
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 5% 50%;
+    --accent: 280 70% 80%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 10% 92%;
+    --input: 240 10% 95%;
+    --ring: 340 82% 75%;
+    --radius: 2rem;
+    
+    /* 毛玻璃效果 */
+    --glass-bg: rgba(255, 255, 255, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-blur: 25px;
+    
+    /* 渐变色 */
+    --gradient-primary: linear-gradient(135deg, hsl(340 82% 75%), hsl(340 70% 85%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 80% 75%), hsl(210 70% 85%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(340 100% 98%));
+    --gradient-card: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(173, 216, 230, 0.15));
+    
+    /* 阴影 */
+    --shadow-elegant: 0 10px 30px -10px hsl(340 82% 75% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(340 82% 75% / 0.2);
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer utilities {
+  /* 渐变文字效果 */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* 渐变背景 */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  /* 毛玻璃效果 */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    border: 1px solid var(--glass-border);
+  }
+  
+  /* 流体动画背景 */
+  .fluid-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .fluid-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.4;
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  .fluid-blob-1 {
+    width: 300px;
+    height: 300px;
+    background: hsl(340 82% 75%);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .fluid-blob-2 {
+    width: 250px;
+    height: 250px;
+    background: hsl(210 80% 75%);
+    top: 60%;
+    right: 10%;
+    animation-delay: 5s;
+  }
+  
+  .fluid-blob-3 {
+    width: 200px;
+    height: 200px;
+    background: hsl(280 70% 80%);
+    bottom: 10%;
+    left: 50%;
+    animation-delay: 10s;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -30px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+  }
+  
+  /* 卡片滑动动画 */
+  .slide-out-left {
+    animation: slideOutLeft 0.3s ease-in forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.4s ease-out forwards;
+  }
+  
+  @keyframes slideOutLeft {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* 全局样式 */
+page {
+  background: hsl(var(--background));
+  letter-spacing: 0.05em;
+}
