@@ -17,6 +17,8 @@
 传统测试往往受“期望效应”影响——你会下意识勾选那个“更好的自己”。
 而 M-Pulse 利用快速反应，在你大脑的防御机制（逻辑加工）还没启动前，就已经抓取到了你的本能偏好。
 
+<img width="1153" height="2048" alt="jimeng-2026-03-17-1180-改为“告别繁琐测试”" src="https://github.com/user-attachments/assets/c6829c87-730e-4ecd-9ec1-541b7bfe13ac" />
+
 
 # Project Overview
 
