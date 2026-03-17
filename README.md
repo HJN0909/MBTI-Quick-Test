@@ -17,8 +17,7 @@
 传统测试往往受“期望效应”影响——你会下意识勾选那个“更好的自己”。
 而 M-Pulse 利用快速反应，在你大脑的防御机制（逻辑加工）还没启动前，就已经抓取到了你的本能偏好。
 
-<img width="1153" height="2048" alt="jimeng-2026-03-17-1180-改为“告别繁琐测试”" src="https://github.com/user-attachments/assets/c6829c87-730e-4ecd-9ec1-541b7bfe13ac" />
-
+<img width="1153" height="1705" alt="IMG_20260317_150431" src="https://github.com/user-attachments/assets/d166cc66-2334-4b1c-a045-917141f4dce6" />
 
 # Project Overview
 
@@ -74,3 +73,9 @@ pnpm install # Install dependencies
 ```bash
 pnpm run lint  # Lint source (Important: After modifying the code, please execute this command to perform necessary checks.)
 ```
+
+![IMG_20260317_150451](https://github.com/user-attachments/assets/b062b02f-d363-41f7-be33-d2c21d7e6092)
+![IMG_20260317_150508](https://github.com/user-attachments/assets/5165413c-cbf2-4e11-b328-8d9b6dbb2591)
+![IMG_20260317_150537](https://github.com/user-attachments/assets/430d7f68-99d2-41e8-9662-879b3d9594ad)
+![IMG_20260317_150525](https://github.com/user-attachments/assets/074f6fa1-9c8f-46f2-9530-24d45387923d)
+
